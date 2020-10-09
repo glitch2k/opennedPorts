@@ -1,0 +1,10 @@
+---
+
+
+- name: add down interfaces to file
+  hosts: static_test
+  connection: local
+  gather_facts: yes
+
+  roles:
+    - openPorts

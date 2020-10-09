@@ -1,2 +1,11 @@
 ---
 # tasks file for openPorts
+
+
+- name: add down interfaces to file
+  lineinfile:
+    line: "{{ item.key }} {{ item.value.operstatus }}"
+    path: "{{ playbook_dir }}/{{ inventory_hostname }}_down_ports.txt"
+    create: yes
+  with_items: "{{ ansible_net_interfaces | dict2items }}"
+  when: item.value.operstatus == 'down'
