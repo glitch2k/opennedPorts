@@ -1,0 +1,24 @@
+ "ansible_facts.net_interfaces": {
+        "GigabitEthernet0/1": {
+            "bandwidth": 1000000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "00b8.b3c0.4c01",
+            "mediatype": "10/100/1000BaseTX",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"
+        },
+        "GigabitEthernet0/10": {
+            "bandwidth": 10000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "00b8.b3c0.4c0a",
+            "mediatype": "Not Present",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"

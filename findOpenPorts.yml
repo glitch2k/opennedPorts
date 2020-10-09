@@ -1,10 +1,10 @@
 ---
 
 
-- name: add down interfaces to file
+- name: /// ADD OPEN INTERFACES TO FILE
   hosts: static_test
-  connection: local
-  gather_facts: yes
+  connection: network_cli
+  gather_facts: no
 
   roles:
     - openPorts
