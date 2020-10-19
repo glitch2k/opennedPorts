@@ -3,8 +3,8 @@
 
 - name: add down interfaces to file
   hosts: static_test
-  connection: local
-  gather_facts: yes
+  connection: network_cli
+  gather_facts: no
 
   roles:
     - openPorts

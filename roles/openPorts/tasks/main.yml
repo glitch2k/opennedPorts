@@ -1,11 +1,22 @@
 ---
 # tasks file for openPorts
 
+- name: PLAY 01 --- GET FACTS FROM DEVICE
+  ios_facts:
+    gather_subset:
+      - interfaces
+
 
 - name: add down interfaces to file
   lineinfile:
-    line: "{{ item.key }} {{ item.value.operstatus }}"
+    line: "{{ item.key }} {{ item.value.operstatus }}  {{ item.value.description }}"
     path: "{{ playbook_dir }}/{{ inventory_hostname }}_down_ports.txt"
     create: yes
   with_items: "{{ ansible_net_interfaces | dict2items }}"
   when: item.value.operstatus == 'down'
+
+
+# - name: STATIC TEST --- DISPLAY ansible_net_interface VALUES
+#   debug:
+#     var: ansible_facts
+

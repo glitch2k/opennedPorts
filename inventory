@@ -1,5 +1,5 @@
 [static_test]
-ADM-HASSAN-2960L-19 ansible_network_os=ios ansible_user=stison-admin ansible_ssh_pass=glitchy2TheM@x
+JIA-TUG-3750-2 ansible_network_os=ios ansible_user=stison-admin ansible_ssh_pass=glitchy2TheM@x
 
 
 [transfer_rate_test]
