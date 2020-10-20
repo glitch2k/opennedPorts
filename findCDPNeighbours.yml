@@ -1,0 +1,10 @@
+---
+
+
+- name: PLAY 01 --- LIST ALL THE SWITCHES CONNECTED TO THIS DEVICE
+  hosts: JIA-TUG-3750-2
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - findCDPNeighbours

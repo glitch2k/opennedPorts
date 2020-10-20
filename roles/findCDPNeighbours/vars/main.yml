@@ -1,0 +1,7 @@
+---
+# vars file for findCDPNeighbours
+
+
+ansible_network_os: ios 
+ansible_user: stison-admin 
+ansible_ssh_pass: glitchy2TheM@x

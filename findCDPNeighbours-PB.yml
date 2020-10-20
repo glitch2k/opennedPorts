@@ -1,0 +1,29 @@
+---
+
+
+- name: PLAY 01 --- LIST ALL THE SWITCHES CONNECTED TO THIS DEVICE
+  hosts: JIA-TUG-3750-2
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+#  runs the show cdp neighbor command and saves the output to a variable called results
+    - name: PLAY 01 --- RUN SHOW CDP NEIGHBOR CMD
+      ios_command:
+        commands: sh cdp ne
+      register: results
+
+      
+# uses the lineinfile module to enter each line from the output of show cdp neighbor cmd 
+# "{{ results.stdout_lines }}" is a python list with each item representing a line of display
+# that would be seen if the command was ran on the switch
+# the task will loop over each line form the list and write it as a line in the file
+# the "\n" will cause the task to add a new line after each line is entered in the file
+#   this is to prevent all the data from being entered on 1 line in the file
+    - name: TASK 02 --- SAVE RSULTS TO FILE
+      lineinfile:
+        line: "{{ item }}\n" 
+        path: "{{ playbook_dir }}/{{ inventory_hostname }}_cdp_neighbours.txt"
+        create: yes
+      with_items: "{{ results.stdout_lines }}"
+  

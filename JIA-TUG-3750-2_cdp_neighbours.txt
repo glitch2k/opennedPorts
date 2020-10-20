@@ -1,0 +1,58 @@
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+
+JIA-SUBSTATION-2960-38.jaa.aero
+
+                 Gig 1/0/15        168               S    WS-C2960+ Gig 0/1
+
+JIA-DevLab-SW01-40.jaa.aero
+
+                 Gig 2/0/15        130               S    WS-C2960X Gig 1/0/50
+
+JIA-TUG-2960X-10.jaa.aero
+
+                 Gig 1/0/6         169               S    WS-C2960X Gig 1/0/49
+
+JIA-PAROOM-620-9.jaa.aero
+
+                 Gig 1/0/18        179               S    WS-C2960X Gig 1/0/49
+
+JIA-CHAPEL-49.jaa.aero
+
+                 Gig 1/0/1         173               S    WS-C2960S Gig 1/0/49
+
+JIA-AS188-620-1.jaa.aero
+
+                 Ten 1/1/1         161             R S I  WS-C4500X Ten 1/1/20
+
+JIA-AS188-620-1.jaa.aero
+
+                 Ten 2/1/1         134             R S I  WS-C4500X Ten 2/1/20
+
+JIA-MAINTGATE-COLEF-620-175.jaa.aero
+
+                 Gig 1/0/23        142               S    IE-4000-4 Gig 1/1
+
+PAR-GROUND-2960L-80.jaa.aero
+
+                 Gig 2/0/6         166               S    WS-C2960L Gig 0/9
+
+JIA-VEHSTOR-620-91.jaa.aero
+
+                 Gig 2/0/23        174              S I   IE-4000-4 Gig 1/1
+
+JIA-VEHGATE-620-93.jaa.aero
+
+                 Gig 1/0/20        120              S I   IE-4000-4 Gig 1/1
+
+JIA-GROUNDSBLDG-620-94.jaa.aero
+
+                 Gig 2/0/20        167              S I   IE-4000-4 Gig 1/1
+
